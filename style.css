@@ -1,0 +1,226 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+header, nav {
+    background-color: #004d40;
+    color: white;
+}
+
+.top-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #00796b;
+}
+
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.info-section img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.info-section div {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .top-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .info-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-section img {
+        margin-bottom: 20px;
+    }
+}
+section {
+    padding: 2rem 5%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and shadow */
+}
+
+/* Hover Effect for Sections */
+section:hover {
+    transform: scale(1.02); /* Slightly scale up the section */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Section with Image and Text Styles */
+.section-image-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for background color */
+}
+
+.section-image-text:hover {
+    background-color: #f8f8f8; /* Slightly change background color on hover */
+}
+
+/* Ensure that images don't stretch disproportionately on hover */
+.section-image-text img {
+    width: 45%; /* Assign a width percentage */
+    height: auto;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for transform */
+}
+
+.section-image-text img:hover {
+    transform: scale(1.05); /* Slightly scale up the image */
+}
+
+/* Content division inside the section */
+.section-image-text div {
+    width: 50%;
+    padding: 1rem;
+}
+
+/* Responsive Design: Adjusts the flex direction on smaller screens */
+@media (max-width: 768px) {
+    .section-image-text {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-image-text img,
+    .section-image-text div {
+        width: 100%;
+    }
+
+    /* Reduce the hover effect on smaller screens */
+    .section-image-text:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .section-image-text img:hover {
+        transform: none;
+    }
+}
+
+
+.enquiry-section {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.enquiry-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+#enquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#enquiry-form input,
+#enquiry-form textarea {
+    padding: 0.8rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s;
+}
+
+#enquiry-form input:focus,
+#enquiry-form textarea:focus {
+    outline: none;
+    border-color: #005f73;
+    box-shadow: 0 0 0 2px rgba(0, 95, 115, 0.2);
+}
+
+#enquiry-form .submit-btn {
+    padding: 1rem;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    background-color: #005f73;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#enquiry-form .submit-btn:hover {
+    background-color: #003d4c;
+}
+
+/* Add additional media queries as necessary for responsiveness */
+@media (max-width: 768px) {
+    .enquiry-section {
+        padding: 1rem;
+    }
+}
