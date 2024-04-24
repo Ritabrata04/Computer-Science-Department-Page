@@ -1,7 +1,7 @@
-Manipal University Jaipur - CS Department Website 🖥️
+#Manipal University Jaipur - CS Department Website 🖥️
 This repository contains the code for the official Computer Science Department page of Manipal University Jaipur. The website is designed to provide comprehensive information about the department, including faculty details, courses offered, research, placements, and more.
 
- Replace images/banner.png with an actual path to a representative image from your website if available.
+[!]eplace images/banner.png with an actual path to a representative image from your website if available.
 
 Repository Structure 📂
 This repo consists of three main files:
